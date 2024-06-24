@@ -58,8 +58,8 @@ def augment_markov(input_image, ratio_a, ratio_b, size):
 
 class RandomBoundary_markov(object):
     def __init__(self, ratio_a, ratio_b, size, threshold=128):
-        self.ratio_a = ratio_a
-        self.ratio_b = ratio_b
+        self.ratio_a = 1 - ratio_a
+        self.ratio_b = 1 - ratio_b
         self.size = size
         self.threshold = threshold
 
@@ -77,7 +77,7 @@ class RandomBoundary_markov(object):
 
 # usage
 tf = [        
-        RandomBoundary_markov(ratio_a=0.1, ratio_b=0.1, size=2),  # proposed MSTV method (1-ratio = p_m, size = h)     
+        RandomBoundary_markov(ratio_a=0.1, ratio_b=0.1, size=2),  # proposed MSTV method (ratio_a, ratio_b = p_m, size = h)     
         transforms.RandomRotation(5),        
         transforms.ToTensor(),
         transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
