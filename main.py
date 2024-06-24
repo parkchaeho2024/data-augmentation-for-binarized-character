@@ -76,7 +76,7 @@ class RandomBoundary_markov(object):
 
 # usage
 tf = [        
-        RandomBoundary_markov(ratio_a=0.9, ratio_b=0.9, size=2),  # proposed MSTV method (ratio_a, ratio_b = p_m, size = h)     
+        RandomBoundary_markov(ratio_a=0.9, ratio_b=0.9, size=3),  # proposed MSTV method (ratio_a, ratio_b = p_m, size = h)     
         transforms.RandomRotation(5),        
         transforms.ToTensor(),
         transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
