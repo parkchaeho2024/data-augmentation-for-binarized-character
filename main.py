@@ -2,7 +2,6 @@ import numpy as np
 from scipy.ndimage import distance_transform_edt
 from PIL import Image
 import cv2
-import random
 
 from torchvision import datasets, transforms
 
