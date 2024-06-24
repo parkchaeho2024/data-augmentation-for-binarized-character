@@ -32,3 +32,9 @@ This algorithm preserves the original image features while introducing variation
 
 * Green region: the stroke thickness is increased
 * Red region: the stroke thickness is decreased
+
+## Installation
+
+```
+conda install numpy scipy pillow
+```
